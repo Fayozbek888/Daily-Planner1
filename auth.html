@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="bg-animated"></div>
+    <div class="container">
+        <div class="header">
+            <h1>Samaradorlik Planner</h1>
+            <p class="subtitle">Har kuni samarali rejalashtiring</p>
+        </div>
+
+        <div class="auth-card" id="signup-section">
+            <div class="vstack">
+                <div class="input"><input type="text" id="signupName" placeholder="Ismingiz" autocomplete="name"></div>
+                <div class="input"><input type="email" id="signupEmail" placeholder="Email" autocomplete="email"></div>
+                <div class="input rowstack"><input type="password" id="signupPass" placeholder="Parol"
+                        autocomplete="new-password"><span class="toggle-eye" data-toggle="signupPass">Ko‘rish</span>
+                </div>
+                <button class="btn btn-primary btn-block" id="signupBtn">Ro'yxatdan o'tish</button>
+            </div>
+            <div class="auth-actions">
+                <span class="ts">Profilingiz bormi?</span>
+                <span id="showLogin" class="btn-link">Kirish</span>
+            </div>
+        </div>
+
+        <div class="auth-card hidden" id="login-section">
+            <div class="vstack">
+                <div class="input"><input type="email" id="loginEmail" placeholder="Email" autocomplete="email"></div>
+                <div class="input rowstack"><input type="password" id="loginPass" placeholder="Parol"
+                        autocomplete="current-password"><span class="toggle-eye" data-toggle="loginPass">Ko‘rish</span>
+                </div>
+                <button class="btn btn-primary btn-block" id="loginBtn">Kirish</button>
+            </div>
+            <div class="auth-actions">
+                <span class="ts">Yangi foydalanuvchimisiz?</span>
+                <span id="showSignup" class="btn-link">Ro'yxatdan o'tish</span>
+            </div>
+        </div>
+
+        <div class="planner-card hidden" id="planner-section">
+            <div class="planner-header">
+                <div class="welcome"><span class="badge" id="today"></span><span class="name" id="helloName"></span>
+                </div>
+                <div class="filters">
+                    <button class="tab active" data-filter="all">Barchasi</button>
+                    <button class="tab" data-filter="active">Faol</button>
+                    <button class="tab" data-filter="done">Bajarilgan</button>
+                    <button class="btn btn-ghost btn-sm" id="clearDone">Bajarilganni tozalash</button>
+                    <button class="btn btn-ghost btn-sm" id="logoutBtn">Chiqish</button>
+                    <input type="time" id="taskTime">
+                </div>
+            </div>
+            <div class="planner-actions">
+                <div class="input" style="flex:1 1 320px"><input type="text" id="taskInput"
+                        placeholder="Vazifa kiriting (Enter)" /></div>
+                <button class="btn btn-primary" id="addTaskBtn">Qo'shish</button>
+            </div>
+            <div class="timeline" id="taskList"></div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
